@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>SlickGrid example 1: Basic grid</title>
+	<link rel="stylesheet" href="slickgrid/slick.grid.css" type="text/css" />
+	<link rel="stylesheet" href="slickgrid/css/smoothness/jquery-ui-1.11.3.custom.css" type="text/css" />
+	<link rel="stylesheet" href="slickgrid/examples/examples.css" type="text/css" />
+</head>
+
+<body>
+	<center><h1>स्वरांजलि</h1></center>
+  <div id="myGrid" style="height:768px;"></div>
+	<script src="slickgrid/lib/jquery-1.11.2.min.js"></script>
+	<script src="slickgrid/lib/jquery.event.drag-2.2.js"></script>
+
+	<script src="slickgrid/slick.core.js"></script>
+	<script src="slickgrid/slick.grid.js"></script>
+
+	<script>
+
+
+		var grid;
+		var columns = [
+			{ id: "name", name: "नाम", field: "name" ,sortable: true
+},
+			{ id: "mobileno", name: "चल दूरभाष", field: "mobileno" },
+			{ id: "email", name: "अनुडाक ", field: "email" },
+			{ id: "dob", name: "जन्मतिथि", field: "dob" },
+			{ id: "prant", name: "प्रान्त", field: "prant" },
+			{ id: "vibhag", name: "विभाग", field: "vibhag" },
+			{ id: "jila", name: "जिला", field: "jila" },
+			{ id: "nagar", name: "नगर", field: "nagar" },
+			{ id: "shakha", name: "शाखा", field: "shakha" },
+			{ id: "daayitv", name: "दायित्व", field: "daayitv" },
+			{ id: "shikshan", name: "शिक्षण", field: "shikshan" },
+			{ id: "karyvivran", name: "कार्यविवरण", field: "karyvivran" },
+			{ id: "mainvadhy", name: "मूल वाद्य", field: "mainvadhy" },
+			{ id: "aanakrachna", name: "आनक", field: "aanakrachna" },
+			{ id: "shankhrachna", name: "शंख", field: "shankhrachna" },
+			{ id: "vansirachna", name: "वंशी", field: "vansirachna" },
+		];
+		var options = {
+			enableCellNavigation: true,
+			enableColumnReorder: false
+		};
+		$(function () {
+			var data = [];
+			for (var i = 0; i < 200; i++) {
+				data[i] = {
+					name: "योगेश मिश्र",
+					mobileno: "8824179288",
+					email: "yogimishra96@gmail.com",
+					dob: "06-09-1996",
+					prant: "जयपुर",
+					vibhag: "जयपुर",
+					jila: "विधाधर",
+					nagar: "विजयनगर",
+					shakha: "केशव",
+					daayitv: "नगर घोष प्रमुख",
+					shikshan: "द्वितीय वर्ष",
+					karyvivran: "Full stack developer",
+					mainvadhy: "आनक",
+					aanakrachna: "किरन,उदय,श्रीराम,सोनभद्र,मीरा,शिवरंजनी,भूप,तिलंग",
+					shankhrachna: "",
+					vansirachna: "मीरा,शिवरंजनी,भूप,तिलंग"
+				};
+		    }
+    		grid = new Slick.Grid("#myGrid", data, columns, options);
+  		})
+	</script>
+</body>
+
+</html>
