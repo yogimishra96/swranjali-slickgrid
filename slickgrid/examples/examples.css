@@ -231,4 +231,9 @@ input.editor-checkbox {
   border: 0;
 }
 
+#table-title{
+    font-size: 18px;
+    background: orange;
+    color: #3131b9;
+}
 
